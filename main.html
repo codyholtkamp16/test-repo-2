@@ -14,7 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f0ff;
-            color: #333;
+            background-image: url("data:image/svg+xml,%")"
+            color #333;
             line-height: 1.6;
         }
 
@@ -104,9 +105,27 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.2) 0%, rgba(91, 127, 199, 0.2) 100%);
+            background-color: #f5f0ff;
+            position: relative;
             padding: 4rem 2rem;
             text-align: center;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://media.istockphoto.com/id/1310729411/vector/ball-of-yarn-in-doodle-style-hand-draw-clews-of-thread-for-knitting-yarn-ball-in-simple.jpg?s=612x612&w=0&k=20&c=t0lGL9MQT5N8fnYIEyHsXHAmLP_R1_AJtyrySMqW7jI=');
+            background-size: 180px;
+            background-position: 15% -10px;
+            background-repeat: repeat;
+            opacity: 0.09;
+            z-index: -1;
         }
 
         .hero h1 {
@@ -337,7 +356,7 @@
             text-align: center;
             color: #7b5ea7;
             padding: 2rem;
-        }
+        }f
 
         .toast {
             position: fixed;

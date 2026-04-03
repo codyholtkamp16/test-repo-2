@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amigurumi Bear - Planet Vic</title>
+    <title>{{PRODUCT_NAME}} - Cozy Stitches</title>
     <style>
         * {
             margin: 0;
@@ -225,7 +225,7 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="main.html" class="logo">Planet <span>Vic</span></a>
+            <a href="main.html" class="logo">Cozy <span>Stitches</span></a>
             <nav>
                 <ul>
                     <li><a href="main.html#products">Shop</a></li>
@@ -241,40 +241,32 @@
         
         <div class="product-detail">
             <div class="product-gallery">
-                <img class="main-image" src="images/bear.jpg" alt="Amigurumi Bear" id="mainImage">
+                <img class="main-image" src="{{MAIN_IMAGE}}" alt="{{PRODUCT_NAME}}" id="mainImage">
                 <div class="thumbnail-gallery">
-                    <img class="thumbnail active" src="images/bear.jpg" alt="Blanket view 1" onclick="changeImage('images/bear.jpg')">
-                    <img class="thumbnail" src="images/bear-detail1.jpg" alt="Blanket detail" onclick="changeImage('images/bear-detail1.jpg')">
-                    <img class="thumbnail" src="images/bear-detail2.jpg" alt="Blanket texture" onclick="changeImage('images/bear-detail2.jpg')">
+                    {{THUMBNAILS}}
                 </div>
             </div>
             
             <div class="product-info">
-                <h1 class="product-title">Amigurumi Bear</h1>
-                <p class="product-price">$34.99</p>
-                <p class="product-description">
-                    Wrap yourself in warmth with our handcrafted Amigurumi Bear. Made with premium soft yarn, this blanket is perfect for chilly evenings, movie nights, or adding a touch of handmade comfort to your living space. Each blanket is carefully crocheted with love and attention to detail.
-                </p>
+                <h1 class="product-title">{{PRODUCT_NAME}}</h1>
+                <p class="product-price">${{PRICE}}</p>
+                <p class="product-description">{{DESCRIPTION}}</p>
                 
                 <div class="product-features">
                     <h3>Features:</h3>
                     <ul>
-                        <li>Hypoallergenic premium yarn</li>
-                        <li>Gentle spot clean recommended</li>
-                        <li>Height: 12 inches</li>
-                        <li>Available in various colors</li>
-                        <li>Handmade with love</li>
+                        {{FEATURES}}
                     </ul>
                 </div>
                 
-                <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                <button class="add-to-cart-btn" onclick="addToCart({PRODUCT_ID})">Add to Cart</button>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Planet Vic. All rights reserved.</p>
-        <p>Handmade Projects by Vic</p>
+        <p>© 2026 Cozy Stitches. All rights reserved.</p>
+        <p>Handmade with ❤️ for you</p>
     </footer>
 
     <script>
@@ -286,8 +278,9 @@
             event.target.classList.add('active');
         }
 
-        function addToCart() {
-            alert('Amigurumi Bear added to cart!');
+        function addToCart(productId) {
+            alert('Product added to cart!');
+            // In a real implementation, this would add to cart
         }
     </script>
 </body>
