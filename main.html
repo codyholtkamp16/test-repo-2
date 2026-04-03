@@ -455,56 +455,64 @@
                 name: "Cozy Blanket",
                 description: "Soft and warm blanket perfect for cold evenings",
                 price: 89.99,
-                image: "images/blanket.jpg"
+                image: "images/blanket.jpg",
+                page: "blanket.html"
             },
             {
                 id: 2,
                 name: "Amigurumi Bear",
                 description: "Adorable handmade teddy bear, great for gifts",
                 price: 34.99,
-                image: "images/bear.jpg"
+                image: "images/bear.jpg",
+                page: "bear.html"
             },
             {
                 id: 3,
                 name: "Winter Scarf",
                 description: "Elegant scarf to keep you warm in style",
                 price: 29.99,
-                image: "images/scarf.jpg"
+                image: "images/scarf.jpg",
+                page: "scarf.html"
             },
             {
                 id: 4,
                 name: "Baby Booties",
                 description: "Gentle and comfortable booties for little ones",
                 price: 19.99,
-                image: "images/booties.jpg"
+                image: "images/booties.jpg",
+                page: "booties.html"
             },
             {
                 id: 5,
                 name: "Flower Bouquet",
                 description: "Beautiful crochet flowers that never wilt",
                 price: 44.99,
-                image: "images/flowers.jpg"
+                image: "images/flowers.jpg",
+                page: "flowers.html"
             },
             {
                 id: 6,
                 name: "Market Bag",
                 description: "Eco-friendly reusable bag for shopping",
                 price: 24.99,
-                image: "images/bag.jpg"
+                image: "images/bag.jpg",
+                page: "bag.html"
             },
             {
                 id: 7,
                 name: "Cozy Slippers",
                 description: "Comfortable slippers for home relaxation",
                 price: 39.99,
-                image: "images/slippers.jpg"
+                image: "images/slippers.jpg",
+                page: "slippers.html"
             },
             {
                 id: 8,
                 name: "Decorative Pillow",
                 description: "Handcrafted pillow to beautify your space",
                 price: 49.99,
-                image: "images/pillow.jpg"
+                image: "images/pillow.jpg",
+                page: "pillow.html"
             }
         ];
 
@@ -513,14 +521,13 @@
         function loadProducts() {
             const grid = document.getElementById('products-grid');
             grid.innerHTML = products.map(product => {
-                const productPage = product.name.toLowerCase().replace(/ /g, '-') + '.html';
                 return `
                 <div class="product-card">
-                    <a href="${productPage}">
+                    <a href="${product.page}">
                         <img class="product-image" src="${product.image}" alt="${product.name}" onerror="this.style.display='none'">
                     </a>
                     <div class="product-info">
-                        <a href="${productPage}" style="text-decoration: none;">
+                        <a href="${product.page}" style="text-decoration: none;">
                             <h3 class="product-name">${product.name}</h3>
                         </a>
                         <p class="product-description">${product.description}</p>
